@@ -4,15 +4,15 @@
 
 @font-face {
     font-family: "bebasneue";
-    src: url(../fonts/bebasneue_regular.woff2);
+    src: url(./fonts/bebasneue_regular.woff2);
 }
 @font-face {
     font-family: "broken";
-    src: url(../fonts/broken-webfont.woff2);
+    src: url(./fonts/broken-webfont.woff2);
 }
 @font-face {
     font-family: "helveticaa";
-    src: url(../fonts/bebasneue_regular.woff2);
+    src: url(./fonts/bebasneue_regular.woff2);
 }
 
 
@@ -51,7 +51,7 @@ div.footer{
 
 div.redes-sociales img{
     width: 30px;
-    
+
 }
 
 div.marca img{
