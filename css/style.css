@@ -3,16 +3,57 @@
 }
 
 @font-face {
-    font-family: "bebasNeue";
-    src: url(/fonts/bebasneue_regular.woff2);
+    font-family: "bebasneue";
+    src: url(../fonts/bebasneue_regular.woff2);
 }
 @font-face {
     font-family: "broken";
-    src: url(/fonts/broken-webfont.woff2);
+    src: url(../fonts/broken-webfont.woff2);
 }
 @font-face {
-    font-family: "helvetica";
-    src: url(/fonts/helvetica.woff2);
+    font-family: "helveticaa";
+    src: url(../fonts/bebasneue_regular.woff2);
 }
 
 
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: helvetica;
+    color: whitesmoke;
+    background-color: rgb(26, 26, 26);
+    height: 100vh;
+    max-width: 100%;
+}
+
+/* NAVBAR */
+
+nav.navbar{
+    font-family: bebasneue;
+    font-size: 20px;
+}
+
+nav a img {
+    width: 50px;
+}
+
+/* NAVBAR */
+
+
+
+
+
+/* FOOTER */
+
+div.footer{
+    font-family: helveticaa;
+    font-size: 15px;
+}
+
+div.redes-sociales img{
+    width: 30px;
+}
+
+div.marca img{
+    width: 50px;
+}
+/* FOOTER */
