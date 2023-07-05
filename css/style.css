@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: "helveticaa";
-    src: url(../fonts/bebasneue_regular.woff2);
+    src: url(../fonts/helvetica.woff2);
 }
 
 
@@ -44,13 +44,24 @@ nav a img {
 
 /* FOOTER */
 
-div.footer{
+div.pie-pagina{
     font-family: helveticaa;
     font-size: 15px;
 }
 
+div.pie-pagina ul li{
+    list-style: none;
+}
+
+div.marca, div.terminos-condiciones, div.redes-sociales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 div.redes-sociales img{
     width: 30px;
+    margin: 5px;
 
 }
 
