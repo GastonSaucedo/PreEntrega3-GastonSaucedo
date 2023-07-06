@@ -37,9 +37,10 @@ nav a img {
 }
 nav ul li {
   cursor: pointer;
+  border-radius: 10px;
 }
 nav ul li :hover {
-  background-color: red;
+  background-color: #ff0000;
   border-radius: 10px;
 }
 nav .equipos-nav ul li {
@@ -52,6 +53,7 @@ nav .equipos-nav ul li {
 }
 nav .equipos-nav ul li :hover {
   background-color: red;
+  border-radius: 10px;
 }
 
 /* NAVBAR */

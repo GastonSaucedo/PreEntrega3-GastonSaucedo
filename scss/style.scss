@@ -1,6 +1,5 @@
-*{
-    box-sizing: border-box; padding: 0; margin: 0; text-decoration: none;
-}
+@import "reset";
+@import "variables";
 
 @font-face {
     font-family: "bebasneue";
@@ -38,9 +37,10 @@ nav{
 
     ul li{
         cursor: pointer;
+        border-radius: 10px;
         
         :hover{
-            background-color: red;
+            background-color: #ff0000;
             border-radius: 10px;
         }
     }
@@ -55,6 +55,7 @@ nav{
             transition: 300ms ease-in-out;
             :hover{
                 background-color: red;
+                border-radius: 10px;
             }
         }
     }
