@@ -1,71 +1,81 @@
-*{
-    box-sizing: border-box; padding: 0; margin: 0; text-decoration: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
 
 @font-face {
-    font-family: "bebasneue";
-    src: url(../fonts/bebasneue_regular.woff2);
+  font-family: "bebasneue";
+  src: url(../fonts/bebasneue_regular.woff2);
 }
 @font-face {
-    font-family: "broken";
-    src: url(../fonts/broken-webfont.woff2);
+  font-family: "broken";
+  src: url(../fonts/broken-webfont.woff2);
 }
 @font-face {
-    font-family: "helveticaa";
-    src: url(../fonts/helvetica.woff2);
+  font-family: "helveticaa";
+  src: url(../fonts/helvetica.woff2);
 }
-
-
-body{
-    background-color: rgba(0, 0, 0, 0.9);
-    font-family: helvetica;
-    color: whitesmoke;
-    background-color: rgb(26, 26, 26);
-    height: 100vh;
-    max-width: 100%;
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: helvetica;
+  color: whitesmoke;
+  background-color: rgb(26, 26, 26);
+  height: 100vh;
+  max-width: 100%;
 }
 
 /* NAVBAR */
-
-nav.navbar{
-    font-family: bebasneue;
-    font-size: 20px;
+nav ul li {
+  font-family: bebasneue;
+  font-size: 20px;
+  color: whitesmoke;
 }
-
 nav a img {
-    width: 50px;
+  width: 50px;
+}
+nav ul li {
+  cursor: pointer;
+}
+nav ul li :hover {
+  background-color: red;
+  border-radius: 10px;
+}
+nav .equipos-nav ul li {
+  font-family: bebasneue;
+  font-size: 20px;
+  color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+nav .equipos-nav ul li :hover {
+  background-color: red;
 }
 
 /* NAVBAR */
-
-
-
-
+/* FOOTER */
+div.pie-pagina {
+  font-family: helveticaa;
+  font-size: 15px;
+}
+div.pie-pagina ul li {
+  list-style: none;
+}
+div.pie-pagina .marca, div.pie-pagina .terminos-condiciones, div.pie-pagina .redes-sociales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.pie-pagina .redes-sociales img {
+  width: 25px;
+  margin: 5px;
+}
+div.pie-pagina .marca img {
+  width: 50px;
+}
 
 /* FOOTER */
 
-div.pie-pagina{
-    font-family: helveticaa;
-    font-size: 15px;
-}
-
-div.pie-pagina ul li{
-    list-style: none;
-}
-
-div.marca, div.terminos-condiciones, div.redes-sociales{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div.redes-sociales img{
-    width: 25px;
-    margin: 5px;
-
-}
-
-div.marca img{
-    width: 50px;
-}
-/* FOOTER */
+/*# sourceMappingURL=style.css.map */
