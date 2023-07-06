@@ -5,16 +5,18 @@
     font-family: "bebasneue";
     src: url(../fonts/bebasneue_regular.woff2);
 }
+
 @font-face {
     font-family: "broken";
     src: url(../fonts/broken-webfont.woff2);
 }
+
 @font-face {
     font-family: "helveticaa";
     src: url(../fonts/helvetica.woff2);
 }
 
-body{
+body {
     background-color: rgba(0, 0, 0, 0.9);
     font-family: helvetica;
     color: whitesmoke;
@@ -25,35 +27,39 @@ body{
 
 /* NAVBAR */
 
-nav{
-        ul li{
-            font-family: bebasneue;
-            font-size: 20px;
-            color: whitesmoke;
-        }
-    a img{
-        width: 50px;
+nav {
+    ul li {
+        font-family: bebasneue;
+        font-size: 1.8vw;
+        color: whitesmoke;
     }
 
-    ul li{
+    a img {
+        width: 4vw;
+        margin: 0.5vw 2vw;
+    }
+
+    ul li {
         cursor: pointer;
         border-radius: 10px;
-        
-        :hover{
+        margin: 0 1vw;
+
+        :hover {
             background-color: #ff0000;
             border-radius: 10px;
         }
     }
 
-    .equipos-nav{
-        ul li{
+    .equipos-nav {
+        ul li {
             font-family: bebasneue;
             font-size: 20px;
             color: whitesmoke;
             border-radius: 10px;
             cursor: pointer;
             transition: 300ms ease-in-out;
-            :hover{
+
+            :hover {
                 background-color: red;
                 border-radius: 10px;
             }
@@ -64,36 +70,100 @@ nav{
 /* NAVBAR */
 
 
+/* INDEX */
+
+div.cabecera {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    video {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        filter: blur(7px);
+    }
+
+    h1 {
+        font-family: broken;
+        color: #ff0000;
+        font-size: 150px;
+        position: absolute;
+        text-shadow: $color-nav 10px 10px 8px;
+    }
+}
+
+
+div.nuestros-equipos-index{
+    margin-top: 10em;
+    margin-bottom: 10em;
+    
+
+    h2{
+        font-size: 4vw;
+        font-family: broken;
+        color: whitesmoke;
+    }
+    tarjetas-equipos-index{
+        h3{
+            font-size: 1vw;
+        }
+    }
+}
+
+/* INDEX */
+
 
 
 
 /* FOOTER */
 
-div.pie-pagina{
+div.pie-pagina {
     font-family: helveticaa;
     font-size: 15px;
-    ul li{
+
+    ul li {
         list-style: none;
     }
 
-    .marca, .terminos-condiciones, .redes-sociales{
+    .marca,
+    .terminos-condiciones,
+    .redes-sociales {
         display: flex;
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    .redes-sociales{
-        img{
+    .redes-sociales {
+        img {
             width: 25px;
             margin: 5px;
         }
     }
 
-    .marca{
-        img{
+    .marca {
+        img {
             width: 50px;
         }
     }
 }
 
 /* FOOTER */
+
+
+@media screen and (max-width: 640px) {
+    div.cabecera {
+        h1 {
+            font-size: 50px;
+        }
+    }
+}
+
+@media screen and (min-width:640px) and (max-width: 1080px) {
+    div.cabecera {
+        h1 {
+            font-size: 80px;
+        }
+    }
+}

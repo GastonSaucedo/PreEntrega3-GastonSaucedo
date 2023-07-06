@@ -29,15 +29,17 @@ body {
 /* NAVBAR */
 nav ul li {
   font-family: bebasneue;
-  font-size: 20px;
+  font-size: 1.8vw;
   color: whitesmoke;
 }
 nav a img {
-  width: 50px;
+  width: 4vw;
+  margin: 0.5vw 2vw;
 }
 nav ul li {
   cursor: pointer;
   border-radius: 10px;
+  margin: 0 1vw;
 }
 nav ul li :hover {
   background-color: #ff0000;
@@ -57,6 +59,41 @@ nav .equipos-nav ul li :hover {
 }
 
 /* NAVBAR */
+/* INDEX */
+div.cabecera {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+div.cabecera video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  filter: blur(7px);
+}
+div.cabecera h1 {
+  font-family: broken;
+  color: #ff0000;
+  font-size: 150px;
+  position: absolute;
+  text-shadow: #212529 10px 10px 8px;
+}
+
+div.nuestros-equipos-index {
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+div.nuestros-equipos-index h2 {
+  font-size: 4vw;
+  font-family: broken;
+  color: whitesmoke;
+}
+div.nuestros-equipos-index tarjetas-equipos-index h3 {
+  font-size: 1vw;
+}
+
+/* INDEX */
 /* FOOTER */
 div.pie-pagina {
   font-family: helveticaa;
@@ -65,7 +102,9 @@ div.pie-pagina {
 div.pie-pagina ul li {
   list-style: none;
 }
-div.pie-pagina .marca, div.pie-pagina .terminos-condiciones, div.pie-pagina .redes-sociales {
+div.pie-pagina .marca,
+div.pie-pagina .terminos-condiciones,
+div.pie-pagina .redes-sociales {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,5 +118,15 @@ div.pie-pagina .marca img {
 }
 
 /* FOOTER */
+@media screen and (max-width: 640px) {
+  div.cabecera h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1080px) {
+  div.cabecera h1 {
+    font-size: 80px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
