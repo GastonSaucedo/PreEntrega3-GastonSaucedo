@@ -168,6 +168,21 @@ div.sumate{
 /* EQUIPOS */
 
 
+/* CONTACTO */
+
+div.politica-privacidad{
+    p{
+        height: 18vw;
+        font-size: 1vw;
+        text-align: left;
+        box-sizing: border-box;
+        overflow: scroll;
+    }
+}
+
+/* CONTACTO */
+
+
 
 /* FOOTER */
 
@@ -231,7 +246,14 @@ div.pie-pagina {
         }
     }
 
-
+    div.politica-privacidad{
+        p{
+            height: 50vw;
+            font-size: 3vw;
+            box-sizing: border-box;
+            overflow: scroll;
+        }
+    }
 
 }
 
