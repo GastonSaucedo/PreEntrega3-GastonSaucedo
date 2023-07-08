@@ -178,6 +178,12 @@ div.pie-pagina .marca img {
   h3 {
     font-size: 6vw;
   }
+  div.jugador {
+    margin: 0.3em;
+  }
+  div.jugador img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
