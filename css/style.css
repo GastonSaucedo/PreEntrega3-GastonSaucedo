@@ -29,11 +29,11 @@ body {
 /* NAVBAR */
 nav ul li {
   font-family: bebasneue;
-  font-size: 1.8vw;
+  font-size: 2vw;
   color: whitesmoke;
 }
-nav a img {
-  width: 4vw;
+nav img {
+  width: 5vw;
   margin: 0.5vw 2vw;
 }
 nav ul li {
@@ -47,7 +47,7 @@ nav ul li :hover {
 }
 nav .equipos-nav ul li {
   font-family: bebasneue;
-  font-size: 20px;
+  font-size: 2vw;
   color: whitesmoke;
   border-radius: 10px;
   cursor: pointer;
@@ -78,22 +78,68 @@ div.cabecera h1 {
   font-size: 150px;
   position: absolute;
   text-shadow: #212529 10px 10px 8px;
+  font-size: 10vw;
 }
 
-div.nuestros-equipos-index {
-  margin-top: 10em;
-  margin-bottom: 10em;
+h2 {
+  font-size: 5vw;
+  font-family: broken;
+  color: whitesmoke;
+  margin: 2em;
+  margin-top: 1em;
+  text-align: center;
 }
-div.nuestros-equipos-index h2 {
+
+h3 {
   font-size: 4vw;
   font-family: broken;
   color: whitesmoke;
+  margin: 2em;
+  margin-top: 4em;
+  text-align: center;
 }
-div.nuestros-equipos-index tarjetas-equipos-index h3 {
-  font-size: 1vw;
+
+div.sobre-nosotros {
+  margin: 3em;
+}
+
+div.equipos-index {
+  margin: 3em;
 }
 
 /* INDEX */
+/* EQUIPOS */
+div.jugador {
+  margin: 0 6em;
+}
+div.jugador h5 {
+  margin-bottom: 1em;
+}
+div.jugador img {
+  width: 20vw;
+}
+
+div.sumate {
+  margin: 2em;
+  text-align: center;
+  font-size: 4vw;
+  font-family: broken;
+}
+div.sumate a {
+  text-decoration: none;
+  border: whitesmoke 2px solid;
+  border-radius: 10px;
+  color: whitesmoke;
+  padding: 10px;
+  transition: 300ms;
+}
+div.sumate :hover {
+  cursor: pointer;
+  background: #212529;
+  box-shadow: 5px 5px 3px rgb(255, 0, 0);
+}
+
+/* EQUIPOS */
 /* FOOTER */
 div.pie-pagina {
   font-family: helveticaa;
@@ -119,13 +165,18 @@ div.pie-pagina .marca img {
 
 /* FOOTER */
 @media screen and (max-width: 640px) {
-  div.cabecera h1 {
-    font-size: 50px;
+  nav img {
+    width: 10vw;
+    margin: 0.5vw 2vw;
   }
-}
-@media screen and (min-width: 640px) and (max-width: 1080px) {
-  div.cabecera h1 {
-    font-size: 80px;
+  nav ul li {
+    font-size: 5vw;
+  }
+  nav .equipos-nav ul li {
+    font-size: 4vw;
+  }
+  h3 {
+    font-size: 6vw;
   }
 }
 

@@ -30,12 +30,12 @@ body {
 nav {
     ul li {
         font-family: bebasneue;
-        font-size: 1.8vw;
+        font-size: 2vw;
         color: whitesmoke;
     }
 
-    a img {
-        width: 4vw;
+    img {
+        width: 5vw;
         margin: 0.5vw 2vw;
     }
 
@@ -53,7 +53,7 @@ nav {
     .equipos-nav {
         ul li {
             font-family: bebasneue;
-            font-size: 20px;
+            font-size: 2vw;
             color: whitesmoke;
             border-radius: 10px;
             cursor: pointer;
@@ -91,29 +91,81 @@ div.cabecera {
         font-size: 150px;
         position: absolute;
         text-shadow: $color-nav 10px 10px 8px;
+        font-size: 10vw;
     }
 }
 
 
-div.nuestros-equipos-index{
-    margin-top: 10em;
-    margin-bottom: 10em;
-    
+h2{
+    font-size: 5vw;
+        font-family: broken;
+        color: whitesmoke;
+        margin: 2em;
+        margin-top: 1em;
+        text-align: center;
+}
 
-    h2{
+
+h3{
         font-size: 4vw;
         font-family: broken;
         color: whitesmoke;
-    }
-    tarjetas-equipos-index{
-        h3{
-            font-size: 1vw;
-        }
-    }
+        margin: 2em;
+        margin-top: 4em;
+        text-align: center;
 }
+
+
+div.sobre-nosotros{
+    margin: 3em;
+}
+
+div.equipos-index{
+    margin: 3em;
+}
+
 
 /* INDEX */
 
+/* EQUIPOS */
+
+div.jugador{
+    margin: 0 6em;
+    h5{
+        margin-bottom: 1em;
+    }
+    img{
+        width: 20vw;
+    }
+}
+
+div.sumate{
+    margin: 2em;
+    text-align: center;
+    font-size: 4vw;
+    font-family: broken;
+    a{    
+        text-decoration: none;
+        border: whitesmoke 2px solid;
+        border-radius: 10px;
+        color: whitesmoke;
+        padding: 10px;
+        transition: 300ms;
+    }
+
+    :hover {
+        cursor: pointer;
+        background:  #212529;
+        box-shadow: 5px 5px 3px rgb(255, 0, 0);
+    }
+
+} 
+
+
+
+
+
+/* EQUIPOS */
 
 
 
@@ -153,17 +205,27 @@ div.pie-pagina {
 
 
 @media screen and (max-width: 640px) {
-    div.cabecera {
-        h1 {
-            font-size: 50px;
+    nav{
+        img {
+        width: 10vw;
+        margin: 0.5vw 2vw;
+    }
+    ul li{
+        font-size: 5vw;
+    }
+    .equipos-nav {
+        ul li {
+            font-size: 4vw;
         }
     }
 }
 
-@media screen and (min-width:640px) and (max-width: 1080px) {
-    div.cabecera {
-        h1 {
-            font-size: 80px;
-        }
+    h3{
+        font-size: 6vw;
     }
+
+}
+
+@media screen and (min-width:640px) and (max-width: 1080px) {
+
 }
