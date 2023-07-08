@@ -146,16 +146,6 @@ div.sumate :hover {
 }
 
 /* EQUIPOS */
-/* CONTACTO */
-div.politica-privacidad p {
-  height: 18vw;
-  font-size: 1vw;
-  text-align: left;
-  box-sizing: border-box;
-  overflow: scroll;
-}
-
-/* CONTACTO */
 /* TIENDA */
 .titulo_tienda {
   text-align: center;
@@ -230,6 +220,16 @@ section button:hover {
 }
 
 /* TIENDA */
+/* CONTACTO */
+div.politica-privacidad p {
+  height: 18vw;
+  font-size: 1vw;
+  text-align: left;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+/* CONTACTO */
 /* FOOTER */
 div.pie-pagina {
   font-family: helveticaa;
@@ -279,6 +279,9 @@ div.pie-pagina .marca img {
     font-size: 3vw;
     box-sizing: border-box;
     overflow: scroll;
+  }
+  h4 {
+    font-size: 6vw;
   }
 }
 
