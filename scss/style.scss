@@ -129,6 +129,12 @@ div.equipos-index{
 
 /* EQUIPOS */
 
+h4{
+    font-size: 3vw;
+    font-family: broken;
+    margin-top: 3em;
+}
+
 div.jugador{
     margin: 0 6em;
     h5{
@@ -181,6 +187,85 @@ div.politica-privacidad{
 }
 
 /* CONTACTO */
+
+
+/* TIENDA */
+
+.titulo_tienda{
+    text-align: center;
+    margin: 20px;
+    color:whitesmoke;
+    font-family: broken;
+    font-size: 80px;
+}
+
+section button{
+    font-size: 20px;
+    font-family: bebasneue;
+    background: whitesmoke;
+    margin-top: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+section button:hover{
+    box-shadow: 2px 2px 5px red;
+
+}
+.subs_tienda{
+    text-align: left;
+    margin-top: 80px;
+}
+
+.canguros_tienda{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 80px 30px; 
+    
+}
+.canguros_tienda img{
+    width: 100%;
+}
+
+.canguros{
+    width: 150px;
+    
+}
+
+.canguros h3{
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+}
+
+.pantalones_tienda{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.pantalones_tienda img{
+    width: 100%;
+}
+
+.pantalones{
+    margin: 40px;
+    width: 150px;
+    
+}
+
+.pantalones h3{
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* TIENDA */
 
 
 
