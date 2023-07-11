@@ -29,7 +29,7 @@ body {
 /* NAVBAR */
 nav ul li {
   font-family: bebasneue;
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: whitesmoke;
 }
 nav img {
@@ -282,6 +282,15 @@ div.pie-pagina .marca img {
   }
   h4 {
     font-size: 6vw;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1080px) {
+  nav img {
+    width: 10vw;
+    margin: 0.5vw 2vw;
+  }
+  nav ul li {
+    font-size: 5vw;
   }
 }
 

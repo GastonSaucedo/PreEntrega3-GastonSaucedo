@@ -1,5 +1,6 @@
-@import "reset";
-@import "variables";
+@import "./partials/reset";
+@import "./partials/variables";
+
 
 @font-face {
     font-family: "bebasneue";
@@ -30,7 +31,7 @@ body {
 nav {
     ul li {
         font-family: bebasneue;
-        font-size: 2vw;
+        font-size: 1.8vw;
         color: whitesmoke;
     }
 
@@ -122,6 +123,7 @@ div.sobre-nosotros{
 
 div.equipos-index{
     margin: 3em;
+
 }
 
 
@@ -343,6 +345,17 @@ div.pie-pagina {
 }
 
 @media screen and (min-width:640px) and (max-width: 1080px) {
-
-    
+    nav{
+        img {
+        width: 10vw;
+        margin: 0.5vw 2vw;
+    }
+    ul li{
+        font-size: 5vw;
+    }
 }
+}
+
+
+@import "./partials/condicionales";
+@import "./partials/bucles";
