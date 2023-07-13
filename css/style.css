@@ -40,9 +40,11 @@ nav ul li {
   cursor: pointer;
   border-radius: 10px;
   margin: 0 1vw;
+  transition: 500ms ease-in-out;
 }
 nav ul li :hover {
-  background-color: #ff0000;
+  /* background-color: #ff0000; */
+  background-image: linear-gradient(to top, red, #212529);
   border-radius: 10px;
 }
 nav .equipos-nav ul li {

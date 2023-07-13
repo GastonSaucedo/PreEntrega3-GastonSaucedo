@@ -28,6 +28,7 @@ body {
 
 /* NAVBAR */
 
+
 nav {
     ul li {
         font-family: bebasneue;
@@ -44,9 +45,10 @@ nav {
         cursor: pointer;
         border-radius: 10px;
         margin: 0 1vw;
-
+        transition: 500ms ease-in-out;
         :hover {
-            background-color: #ff0000;
+            /* background-color: #ff0000; */
+            background-image: linear-gradient(to top, red, $color-nav);
             border-radius: 10px;
         }
     }
@@ -123,6 +125,7 @@ div.sobre-nosotros{
 
 div.equipos-index{
     margin: 3em;
+    
 
 }
 
