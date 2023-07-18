@@ -161,16 +161,8 @@ div.sumate{
         border-radius: 10px;
         color: whitesmoke;
         padding: 10px;
-        transition: 300ms;
+        transition: 300ms;}
     }
-
-    :hover {
-        cursor: pointer;
-        background:  #212529;
-        box-shadow: 5px 5px 3px rgb(255, 0, 0);
-    }
-
-} 
 
 /* EQUIPOS */
 
@@ -303,6 +295,8 @@ div.pie-pagina {
 }
 
 /* FOOTER */
+
+
 
 
 @media screen and (max-width: 640px) {
