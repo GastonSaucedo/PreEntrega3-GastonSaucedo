@@ -1,0 +1,31 @@
+@mixin encabezados() {
+    h1 {
+        font-family: broken;
+        color: #ff0000;
+        font-size: 150px;
+        position: absolute;
+        text-shadow: $color-nav 10px 10px 8px;
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+        font-family: broken;
+        color: whitesmoke;
+        margin: 2em;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    h3 {
+        @extend h2;
+        font-size: 4vw;
+        margin-top: 4em;
+    }
+
+    h4 {
+        @extend h2;
+        font-size: 3vw;
+        margin-top: 3em;
+    }
+}

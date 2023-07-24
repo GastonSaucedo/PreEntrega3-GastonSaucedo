@@ -1,6 +1,9 @@
 @import "./partials/reset";
 @import "./partials/variables";
+@import "./partials/mixins";
 
+
+@include encabezados();
 
 @font-face {
     font-family: "bebasneue";
@@ -32,13 +35,13 @@ body {
 nav {
     ul li {
         font-family: bebasneue;
-        font-size: 1.8vw;
+        font-size: 30px;
         color: whitesmoke;
     }
 
     img {
-        width: 5vw;
-        margin: 0.5vw 2vw;
+        width: 50px;
+        margin: 5px 10px;
     }
 
     ul li {
@@ -88,36 +91,7 @@ div.cabecera {
         filter: blur(7px);
     }
 
-    h1 {
-        font-family: broken;
-        color: #ff0000;
-        font-size: 150px;
-        position: absolute;
-        text-shadow: $color-nav 10px 10px 8px;
-        font-size: 10vw;
-    }
 }
-
-
-h2{
-    font-size: 5vw;
-        font-family: broken;
-        color: whitesmoke;
-        margin: 2em;
-        margin-top: 1em;
-        text-align: center;
-}
-
-
-h3{
-        font-size: 4vw;
-        font-family: broken;
-        color: whitesmoke;
-        margin: 2em;
-        margin-top: 4em;
-        text-align: center;
-}
-
 
 div.sobre-nosotros{
     margin: 3em;
@@ -134,11 +108,7 @@ div.equipos-index{
 
 /* EQUIPOS */
 
-h4{
-    font-size: 3vw;
-    font-family: broken;
-    margin-top: 3em;
-}
+
 
 div.jugador{
     margin: 0 6em;
@@ -177,71 +147,25 @@ div.sumate{
     font-size: 80px;
 }
 
-section button{
-    font-size: 20px;
-    font-family: bebasneue;
-    background: whitesmoke;
-    margin-top: 20px;
-    padding: 5px 20px;
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
+div.ropa{
+    margin: 0 15%;
+    h5{
+        margin-bottom: 1em;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+    }
+    .prenda{
+        font-size: 25px;
+    }
+    .precio{
+        font-size: 20px;
+    }
+    .boton{
+        font-size: 10px;
+    }
 }
-
-section button:hover{
-    box-shadow: 2px 2px 5px red;
-
-}
-.subs_tienda{
-    text-align: left;
-    margin-top: 80px;
-}
-
-.canguros_tienda{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 80px 30px; 
-    
-}
-.canguros_tienda img{
-    width: 100%;
-}
-
-.canguros{
-    width: 150px;
-    
-}
-
-.canguros h3{
-    font-size: 18px;
-    text-align: center;
-    justify-content: center;
-}
-
-.pantalones_tienda{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    flex-wrap: wrap;
-}
-.pantalones_tienda img{
-    width: 100%;
-}
-
-.pantalones{
-    margin: 40px;
-    width: 150px;
-    
-}
-
-.pantalones h3{
-    font-size: 18px;
-    text-align: center;
-    justify-content: center;
-}
-
 
 /* TIENDA */
 
@@ -302,11 +226,11 @@ div.pie-pagina {
 @media screen and (max-width: 640px) {
     nav{
         img {
-        width: 10vw;
-        margin: 0.5vw 2vw;
+        width: 40px;
+        margin: 0px 0px;
     }
     ul li{
-        font-size: 5vw;
+        font-size: 20px;
     }
     .equipos-nav {
         ul li {
@@ -339,6 +263,25 @@ div.pie-pagina {
         font-size: 6vw;
     }
 
+    div.ropa{
+        margin: 0 15%;
+        h5{
+            margin-bottom: 10px;
+        }
+        img{
+            width: 100%;
+        }
+        .prenda{
+            font-size: 15px;
+        }
+        .precio{
+            font-size: 12px;
+        }
+        .boton{
+            font-size: 8px;
+        }
+    }
+
 }
 
 @media screen and (min-width:640px) and (max-width: 1080px) {
@@ -348,7 +291,7 @@ div.pie-pagina {
         margin: 0.5vw 2vw;
     }
     ul li{
-        font-size: 5vw;
+        font-size: 5px;
     }
 }
 }
