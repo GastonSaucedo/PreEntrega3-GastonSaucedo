@@ -27,7 +27,7 @@
 
   <nav class="navbar navbar-expand-lg sticky-top navbar navbar-dark bg-dark">
 
-    <div class="container-fluid">
+    <section class="container-fluid">
 
       <a class="navbar-brand" href="./index.html"><img src="./media/logo_pagina.png" alt="Logo del Equipo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -61,84 +61,82 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   </nav>
 
   <!-- NAVBAR -->
 
   <!--  -->
 
-  <div class="container">
+  <main class="container">
     <h2>CONTACTO</h2>
-    
-    
-    <div class="row m-3">
+
+    <section class="row formulario">
       
-      <div class="col">
-        
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="su nombre">
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@email.com">
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Numero</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="+123 456789">
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Su mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-        </div>
-
+      <div class="col-md-6 col-sm-12">
+        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="su nombre">          
       </div>
 
-      <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <label for="exampleFormControlInput1" class="form-label">Numero</label>
+        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="+123 456789">     
+      </div>
 
-        <div class="col-12 politica-privacidad">
-          <h6 class="h3 mb-3 text-center">Política de privacidad</h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia rem earum sequi. Commodi quos atque
-            voluptas unde! Ex tempore, possimus temporibus earum necessitatibus quas quibusdam! Laboriosam
-            exercitationem sint aut eligendi id fuga blanditiis quisquam harum nam obcaecati, molestiae cupiditate
-            temporibus officiis atque necessitatibus porro vero sapiente nulla iusto repudiandae perspiciatis minima
-            velit. Obcaecati incidunt suscipit praesentium nulla exercitationem? Maxime vel quidem voluptatibus. Quod
-            tempora perspiciatis aliquam. Cum laudantium nemo dolorum tenetur quod architecto fugiat pariatur soluta
-            voluptas, eum quo odit non culpa suscipit quibusdam vero quaerat ullam repellendus voluptates, sed mollitia
-            modi, consequatur amet numquam. Mollitia cumque, provident voluptatum molestiae fugiat error impedit veniam
-            itaque quis assumenda illum quo et dolor soluta quaerat recusandae commodi saepe! Et porro illum itaque
-            minus eius fuga fugit mollitia exercitationem, quod sint, quas sunt ab officia perspiciatis nostrum, iure
-            nihil magni minima? Quisquam, modi accusantium! Natus, possimus a asperiores, vitae voluptas, architecto
-          </p>
+    </section>
+
+    <section class="row formulario">
+      <div class="col col-sm-12">
+        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@email.com">        
+      </div>
+    </section>
+
+    <section class="row formulario">
+      <div class="col col-sm-12">
+        <label for="exampleFormControlTextarea1" class="form-label">Su mensaje</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+      </div>
+    </section>
+
+    <section class="row formulario">
+        <div class="col  col-sm-12 ">
+          <button class="btn btn-primary" type="submit">Enviar formulario</button>
+        </div>
+    </section>
+
+
+    <main class="row formulario">
+
+      <h4>Nuestros Datos</h4>
+
+      <section class="col col-md-6 col-sm-12 ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26204.956407739843!2d-55.96117186099369!3d-34.815512273420225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89820996b163%3A0x29ccb90c0b860210!2sLomas%20de%20Solymar%2C%2015800%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses-419!2suy!4v1690916507271!5m2!1ses-419!2suy"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+
+      <section class="col col-md-6 col-sm-12">
+        <div class="row">
+          <ul>
+            <li class="h-relleno">Donde nos ubicamos:</li>
+            <li class="p-relleno">Lomas de Solymar</li>
+            <li p-relleno>15800 Ciudad de la Costa, </li>
+            <li class="p-relleno">Departamento de Canelones</li>
+          </ul>
         </div>
 
         <div class="row">
-
-          <div class="col-6">
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-              <label class="form-check-label" for="invalidCheck">
-                Acepta los términos y condiciones
-              </label>
-            </div>
-
-          </div>
-
-          <div class="col-6">
-            <button class="btn btn-primary" type="submit">Enviar formulario</button>
-          </div>
-
+          <ul>
+            <li class="h-relleno">Contacto:</li>
+            <li class="p-relleno">Mail: <a href="mailto:gaming.privilege.uy@gmail.com" target="_blank">gaming.privilege.uy@gmail.com</a></li>
+            <li p-relleno>Telefono: <a href="tel:+59894947180">+598 94 947 180</a></li>
+          </ul>
         </div>
+      </section>
 
-      </div>
 
-    </div>
-  </div>
+    </main>
+
+  </main>
 
   <!--  -->
 
@@ -148,26 +146,25 @@
 
   <!-- FOOTER -->
 
-  <div class="container-fluid text-center pie-pagina">
+  <main class="container-fluid text-center pie-pagina">
     <div class="row p-2 bg-dark text-white">
-      <div class="col marca">
+      <section class="col marca">
         <ul>
           <li><a href="./index.html" class=""><img src="./media/logo_pagina.png" alt="Logo del Equipo"></a></li>
           <li>
             <p class="">2023 - Privilege Gaming ©</p>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="col terminos-condiciones">
+      <section class="col terminos-condiciones">
         <ul>
           <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
           <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
         </ul>
-      </div>
+      </section>
 
-
-      <div class="col redes-sociales">
+      <section class="col redes-sociales">
         <ul>
           <li>
             <p class="h5 text-center">Nuestras Redes</p>
@@ -198,12 +195,10 @@
           </li>
         </ul>
 
-
-
-      </div>
+      </section>
 
     </div>
-  </div>
+  </main>
 
   <!-- FOOTER -->
 

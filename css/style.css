@@ -8,7 +8,7 @@
 h1 {
   font-family: broken;
   color: #ff0000;
-  font-size: 150px;
+  font-size: 7vw;
   position: absolute;
   text-shadow: #212529 10px 10px 8px;
   font-size: 10vw;
@@ -18,19 +18,34 @@ h2, h4, h3 {
   font-size: 5vw;
   font-family: broken;
   color: whitesmoke;
-  margin: 2em;
-  margin-top: 1em;
+  margin: 1em;
+  margin-top: 0.5em;
   text-align: center;
 }
 
 h3 {
-  font-size: 4vw;
-  margin-top: 4em;
+  font-size: 3vw;
+  margin-top: 3em;
 }
 
 h4 {
-  font-size: 3vw;
+  font-size: 2vw;
   margin-top: 3em;
+}
+
+ul li {
+  list-style: none;
+}
+
+.h-relleno {
+  font-family: bebasneue;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.p-relleno {
+  font-family: helveticaa;
+  text-decoration: none;
 }
 
 @font-face {
@@ -170,35 +185,35 @@ div.ropa .boton {
 
 /* TIENDA */
 /* CONTACTO */
-div.politica-privacidad p {
-  height: 18vw;
-  font-size: 1vw;
-  text-align: left;
-  box-sizing: border-box;
-  overflow: scroll;
+.formulario {
+  margin-bottom: 20px;
+}
+.formulario iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /* CONTACTO */
 /* FOOTER */
-div.pie-pagina {
+main.pie-pagina {
   font-family: helveticaa;
   font-size: 15px;
 }
-div.pie-pagina ul li {
+main.pie-pagina ul li {
   list-style: none;
 }
-div.pie-pagina .marca,
-div.pie-pagina .terminos-condiciones,
-div.pie-pagina .redes-sociales {
+main.pie-pagina .marca,
+main.pie-pagina .terminos-condiciones,
+main.pie-pagina .redes-sociales {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-div.pie-pagina .redes-sociales img {
+main.pie-pagina .redes-sociales img {
   width: 25px;
   margin: 5px;
 }
-div.pie-pagina .marca img {
+main.pie-pagina .marca img {
   width: 50px;
 }
 
