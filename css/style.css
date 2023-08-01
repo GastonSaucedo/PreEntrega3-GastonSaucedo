@@ -14,7 +14,7 @@ h1 {
   font-size: 10vw;
 }
 
-h2, h4, h3 {
+h2, h4, h3, .sumate {
   font-size: 5vw;
   font-family: broken;
   color: whitesmoke;
@@ -23,7 +23,7 @@ h2, h4, h3 {
   text-align: center;
 }
 
-h3 {
+h3, .sumate {
   font-size: 3vw;
   margin-top: 3em;
 }
@@ -46,6 +46,15 @@ ul li {
 .p-relleno {
   font-family: helveticaa;
   text-decoration: none;
+}
+
+.sumate a {
+  text-decoration: none;
+  border: whitesmoke 2px solid;
+  border-radius: 10px;
+  color: whitesmoke;
+  padding: 10px;
+  transition: 300ms;
 }
 
 @font-face {
@@ -131,26 +140,8 @@ div.equipos-index {
 div.jugador {
   margin: 0 6em;
 }
-div.jugador h5 {
-  margin-bottom: 1em;
-}
 div.jugador img {
   width: 20vw;
-}
-
-div.sumate {
-  margin: 2em;
-  text-align: center;
-  font-size: 4vw;
-  font-family: broken;
-}
-div.sumate a {
-  text-decoration: none;
-  border: whitesmoke 2px solid;
-  border-radius: 10px;
-  color: whitesmoke;
-  padding: 10px;
-  transition: 300ms;
 }
 
 /* EQUIPOS */
@@ -172,12 +163,6 @@ div.ropa h5 {
 div.ropa img {
   object-fit: cover;
   width: 100%;
-}
-div.ropa .prenda {
-  font-size: 25px;
-}
-div.ropa .precio {
-  font-size: 20px;
 }
 div.ropa .boton {
   font-size: 10px;
@@ -223,14 +208,20 @@ main.pie-pagina .marca img {
     width: 40px;
     margin: 0px 0px;
   }
-  nav ul li {
+  nav img ul li {
     font-size: 20px;
   }
-  nav .equipos-nav ul li {
+  nav img .equipos-nav ul li {
     font-size: 4vw;
   }
-  h3 {
+  h2, h3, h4, .sumate {
+    font-size: 8vw;
+  }
+  h3, .sumate {
     font-size: 6vw;
+  }
+  h4 {
+    font-size: 4vw;
   }
   div.jugador {
     margin: 0.3em;
@@ -244,9 +235,6 @@ main.pie-pagina .marca img {
     box-sizing: border-box;
     overflow: scroll;
   }
-  h4 {
-    font-size: 6vw;
-  }
   div.ropa {
     margin: 0 15%;
   }
@@ -255,12 +243,6 @@ main.pie-pagina .marca img {
   }
   div.ropa img {
     width: 100%;
-  }
-  div.ropa .prenda {
-    font-size: 15px;
-  }
-  div.ropa .precio {
-    font-size: 12px;
   }
   div.ropa .boton {
     font-size: 8px;

@@ -5,6 +5,7 @@
 
 @include encabezados();
 @include textos-relleno();
+@include sumate();
 
 @font-face {
     font-family: "bebasneue";
@@ -100,41 +101,18 @@ div.sobre-nosotros{
 
 div.equipos-index{
     margin: 3em;
-    
-
 }
 
 
 /* INDEX */
 
 /* EQUIPOS */
-
-
-
 div.jugador{
     margin: 0 6em;
-    h5{
-        margin-bottom: 1em;
-    }
     img{
         width: 20vw;
     }
 }
-
-div.sumate{
-    margin: 2em;
-    text-align: center;
-    font-size: 4vw;
-    font-family: broken;
-    a{    
-        text-decoration: none;
-        border: whitesmoke 2px solid;
-        border-radius: 10px;
-        color: whitesmoke;
-        padding: 10px;
-        transition: 300ms;}
-    }
-
 /* EQUIPOS */
 
 
@@ -157,12 +135,7 @@ div.ropa{
         object-fit: cover;
         width: 100%;
     }
-    .prenda{
-        font-size: 25px;
-    }
-    .precio{
-        font-size: 20px;
-    }
+
     .boton{
         font-size: 10px;
     }
@@ -226,19 +199,26 @@ main.pie-pagina {
         img {
         width: 40px;
         margin: 0px 0px;
-    }
-    ul li{
-        font-size: 20px;
-    }
-    .equipos-nav {
-        ul li {
-            font-size: 4vw;
+        ul li{
+            font-size: 20px;
+        }
+        .equipos-nav {
+            ul li {
+                font-size: 4vw;
+            }
         }
     }
-}
 
+}
+    h2{
+        font-size: 8vw;
+    }
     h3{
         font-size: 6vw;
+    }
+
+    h4{
+        font-size: 4vw;
     }
 
     div.jugador{
@@ -257,9 +237,7 @@ main.pie-pagina {
         }
     }
 
-    h4{
-        font-size: 6vw;
-    }
+
 
     div.ropa{
         margin: 0 15%;
@@ -268,12 +246,6 @@ main.pie-pagina {
         }
         img{
             width: 100%;
-        }
-        .prenda{
-            font-size: 15px;
-        }
-        .precio{
-            font-size: 12px;
         }
         .boton{
             font-size: 8px;

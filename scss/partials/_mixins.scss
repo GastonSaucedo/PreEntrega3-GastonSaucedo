@@ -46,3 +46,17 @@
         text-decoration: none;
     }
 }
+
+@mixin sumate(){
+    .sumate{
+        @extend h3;
+        a{    
+            text-decoration: none;
+            border: whitesmoke 2px solid;
+            border-radius: 10px;
+            color: whitesmoke;
+            padding: 10px;
+            transition: 300ms;
+        }
+    }
+}
