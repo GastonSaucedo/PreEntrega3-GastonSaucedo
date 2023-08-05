@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contacta con nosotros para poder ayudarte en lo que necesites">
 
-  <meta name="keywords" content="lol, league, of, legends, csgo, counter strike, global, offensive, counter strike global offensive, rl, rocket, rocket league, gaming, e-sports, ligas, uruguay, uruguayo, privilege, PrivilegeUy, privilege gaming">
+  <meta name="keywords"
+    content="lol, league, of, legends, csgo, counter strike, global, offensive, counter strike global offensive, rl, rocket, rocket league, gaming, e-sports, ligas, uruguay, uruguayo, privilege, PrivilegeUy, privilege gaming">
 
   <title>Privilege Gaming | CONTACTANOS</title>
   <link rel="icon" href="./media/logo_pagina.png">
@@ -71,39 +72,41 @@
   <main class="container">
     <h2>CONTACTO</h2>
 
-    <section class="row formulario">
-      
-      <div class="col-md-6 col-sm-12">
-        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="su nombre">          
-      </div>
+    <form action="https://formspree.io/f/mnqkjkqg" method="post">
+      <section class="row formulario">
 
-      <div class="col-md-6 col-sm-12">
-        <label for="exampleFormControlInput1" class="form-label">Numero</label>
-        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="+123 456789">     
-      </div>
+        <div class="col-md-6 col-sm-12">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="su nombre" required>
+        </div>
 
-    </section>
+        <div class="col-md-6 col-sm-12">
+          <label for="numero" class="form-label">Numero</label>
+          <input type="number" class="form-control" id="numero" name="numero" placeholder="+123 456789" required>
+        </div>
 
-    <section class="row formulario">
-      <div class="col col-sm-12">
-        <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@email.com">        
-      </div>
-    </section>
+      </section>
 
-    <section class="row formulario">
-      <div class="col col-sm-12">
-        <label for="exampleFormControlTextarea1" class="form-label">Su mensaje</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-      </div>
-    </section>
+      <section class="row formulario">
+        <div class="col col-sm-12">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo" placeholder="correo@email.com" required>
+        </div>
+      </section>
 
-    <section class="row formulario">
+      <section class="row formulario">
+        <div class="col col-sm-12">
+          <label for="mensaje" class="form-label">Su mensaje</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
+      </section>
+
+      <section class="row formulario">
         <div class="col  col-sm-12 ">
           <button class="btn btn-primary" type="submit">Enviar formulario</button>
         </div>
-    </section>
+      </section>
+    </form>
 
 
     <main class="row formulario">
@@ -111,7 +114,9 @@
       <h4>Nuestros Datos</h4>
 
       <section class="col col-md-6 col-sm-12 ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26204.956407739843!2d-55.96117186099369!3d-34.815512273420225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89820996b163%3A0x29ccb90c0b860210!2sLomas%20de%20Solymar%2C%2015800%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses-419!2suy!4v1690916507271!5m2!1ses-419!2suy"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26204.956407739843!2d-55.96117186099369!3d-34.815512273420225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89820996b163%3A0x29ccb90c0b860210!2sLomas%20de%20Solymar%2C%2015800%20Ciudad%20de%20la%20Costa%2C%20Departamento%20de%20Canelones!5e0!3m2!1ses-419!2suy!4v1690916507271!5m2!1ses-419!2suy"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
 
       <section class="col col-md-6 col-sm-12">
@@ -127,7 +132,8 @@
         <div class="row">
           <ul>
             <li class="h-relleno">Contacto:</li>
-            <li class="p-relleno">Mail: <a href="mailto:gaming.privilege.uy@gmail.com" target="_blank">gaming.privilege.uy@gmail.com</a></li>
+            <li class="p-relleno">Mail: <a href="mailto:gaming.privilege.uy@gmail.com"
+                target="_blank">gaming.privilege.uy@gmail.com</a></li>
             <li p-relleno>Telefono: <a href="tel:+59894947180">+598 94 947 180</a></li>
           </ul>
         </div>
@@ -175,9 +181,10 @@
                   src="./media/socialnetworks/instagram.png" alt="Instagram"></a>
               <a href="https://www.twitch.tv/pvg_dash" target="_blank"><img src="./media/socialnetworks/twitch.png"
                   alt="Twitch"></a>
-              <a href="https://www.discord.com/invite/ZN7TdCV" target="_blank"><img src="./media/socialnetworks/discord.png"
-                  alt="Discord"></a>
-              <a href="https://www.facebook.com/profile.php?id=100087383555799" target="_blank"><img src="./media/socialnetworks/facebook.png" alt="Facebook"></a>
+              <a href="https://www.discord.com/invite/ZN7TdCV" target="_blank"><img
+                  src="./media/socialnetworks/discord.png" alt="Discord"></a>
+              <a href="https://www.facebook.com/profile.php?id=100087383555799" target="_blank"><img
+                  src="./media/socialnetworks/facebook.png" alt="Facebook"></a>
             </div>
           </li>
 
@@ -185,8 +192,8 @@
             <div class="text-center">
               <a href="https://www.tiktok.com/@pvg_dash" target="_blank"><img src="./media/socialnetworks/tiktok.png"
                   alt="TikTok"></a>
-              <a href="https://www.twitter.com/PrivilegeUy" target="_blank"><img src="./media/socialnetworks/twitter.png"
-                  alt="Twitter"></a>
+              <a href="https://www.twitter.com/PrivilegeUy" target="_blank"><img
+                  src="./media/socialnetworks/twitter.png" alt="Twitter"></a>
               <a href="https://wa.me/+59894947180" target="_blank"><img src="./media/socialnetworks/whatsapp.png"
                   alt="Whatsapp"></a>
               <a href="https://www.youtube.com/channel/UCx4XqCqrFaAzNsY5uprFR2g" target="_blank"><img
