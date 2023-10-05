@@ -9,11 +9,32 @@ let productos = [
     { id: 8, nombre: "Microsoft Xbox Serie X", marca: "Microsoft", categoria: "consola", stock: 3, precio: 950, rutaImagen: "Microsoft_Xbox_Serie_X.png" },
 ]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let carrito = []
+let costoTotalCarrito = carrito.reduce((acum, producto) => acum + producto.subTotal, 0)
+let carritoRecuperado = localStorage.getItem("carrito")
+if (carritoRecuperado) {
+    carrito = JSON.parse(carritoRecuperado)
+}
 
 
 /* MOSTRAR PRODUCTOS */
 
+renderizarCarrito(carrito)
 renderizarProductos(productos, carrito)
 
 function renderizarProductos(productos, carrito) {
@@ -32,7 +53,7 @@ function renderizarProductos(productos, carrito) {
         `
 
         contenedor.appendChild(tarjeta)
-        
+
         let botonAgregarAlCarrito = document.getElementById(producto.id)
         botonAgregarAlCarrito.addEventListener("click", (e) => agregarProductoAlCarrito(productos, carrito, e))
     })
@@ -58,31 +79,33 @@ function filtrarProductos(productos) {
 function agregarProductoAlCarrito(productos, carrito, e) {
     let productoEnCarrito
     let productoBuscado
-        
 
-            productoBuscado = productos.find(producto => producto.id == Number(e.target.id))
-            productoEnCarrito = carrito.find(producto => producto.id == productoBuscado.id)
 
-            if (productoBuscado.stock > 0) {
-                if (productoEnCarrito) {
-                    productoEnCarrito.unidades++
-                    productoEnCarrito.subTotal = productoEnCarrito.unidades * productoEnCarrito.precioUnitario
-                } else {
-                    carrito.push({
-                        id: productoBuscado.id,
-                        nombre: productoBuscado.nombre,
-                        precioUnitario: productoBuscado.precio,
-                        unidades: 1,
-                        subTotal: productoBuscado.precio,
-                    })
-                }
-                productoBuscado.stock--
-                alert("el producto se agregó al carrito")
-            } else {
-                alert("Lo sentimos, el producto seleccionado no está disponible.")
-            }
-            renderizarCarrito(carrito)
+    productoBuscado = productos.find(producto => producto.id == Number(e.target.id))
+    productoEnCarrito = carrito.find(producto => producto.id == productoBuscado.id)
+
+    if (productoBuscado.stock > 0) {
+        if (productoEnCarrito) {
+            productoEnCarrito.unidades++
+            productoEnCarrito.subTotal = productoEnCarrito.unidades * productoEnCarrito.precioUnitario
+        } else {
+            carrito.push({
+                id: productoBuscado.id,
+                nombre: productoBuscado.nombre,
+                precioUnitario: productoBuscado.precio,
+                unidades: 1,
+                subTotal: productoBuscado.precio,
+            })
         }
+        productoBuscado.stock--
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+    } else {
+        alert("Lo sentimos, el producto seleccionado no está disponible.")
+    }
+    renderizarCarrito(carrito)
+}
+
+
 
 
 /* AGREGAR AL CARRITO */
@@ -96,26 +119,54 @@ botonVerOcultar.addEventListener("click", mostrarOcultarCarrito)
 
 function mostrarOcultarCarrito() {
     let contenedorCarrito = document.getElementById("contenedorCarrito")
+    let botonMostrarCarrito = document.getElementById("botonMostrarCarrito")
+
+    botonMostrarCarrito.classList.toggle("fa-x")
+    botonMostrarCarrito.classList.toggle("fa-cart-shopping")
     contenedorCarrito.classList.toggle("oculta")
 }
 
 function renderizarCarrito(productosEnCarrito) {
-    let costoTotalCarrito = carrito.reduce((acum, producto) => acum + producto.subTotal, 0)
-
     let divCarrito = document.getElementById("carrito")
     divCarrito.innerHTML = ""
 
     productosEnCarrito.forEach(producto => {
         let tarjetaProductoCarrito = document.createElement("div")
         tarjetaProductoCarrito.innerHTML = `
-        <span>- ${producto.nombre}: <br></span>
+        <span>- ${producto.nombre}: </span>
         <span>${producto.unidades} unidad - </span>
         <span>Subtotal: $${producto.subTotal}</span> 
-        
         `
-        
         divCarrito.appendChild(tarjetaProductoCarrito)
     })
+
+    let comprarCarrito = document.getElementById ("comprarCarrito")
+    let vaciarCarrito = document.getElementById ("vaciarCarrito")
+
+    comprarCarrito.addEventListener("click", () => finalizarCompra(carrito, gracias()))
+    vaciarCarrito.addEventListener("click", () => vaciarCarrito(carrito))
 }
 
 /* MOSTRAR CARRITO */
+
+/* FINALIZAR COMPRA */
+
+function finalizarCompra(carrito) {
+    carrito = []
+    localStorage.removeItem("carrito")
+    renderizarCarrito([])
+    location.reload();
+}
+
+/* FINALIZAR COMPRA */
+
+/* VACIAR CARRITO */
+
+function vaciarCarrito(carrito){
+    carrito = []
+    localStorage.removeItem("carrito")
+    renderizarCarrito([])
+    location.reload();
+}
+
+/* VACIAR CARRITO */

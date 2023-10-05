@@ -153,6 +153,7 @@ div.jugador{
            color: whitesmoke;
            padding: 3px;
            border-radius: 10px;
+           margin: 20px;
            &:hover{
             box-shadow: 2px 2px 2px rgb(255, 0, 0);
            }
@@ -196,7 +197,6 @@ div.jugador{
     right: 30px;
     width: 50%;
     height: 80%;
-    opacity: 100;
     transition: 300ms;
     .carrito{
         display: block;
@@ -204,6 +204,43 @@ div.jugador{
         height: 100%;
         margin: 20px;
     }
+    .comprarCarrito{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 80px;
+        height: 40px;
+        bottom: 35px;
+        right: 100px;
+        font-size: 15px;
+        border-radius: 12px;
+        background-color: rgb(43, 42, 42);
+        color: rgb(255, 255, 255);
+        &:hover{
+            box-shadow: 0px 1px 10px rgb(255, 0, 0); 
+        }
+    }
+    .vaciarCarrito{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 80px;
+        height: 40px;
+        bottom: 35px;
+        right: 200px;
+        font-size: 15px;
+        border-radius: 12px;
+        background-color: rgb(43, 42, 42);
+        color: rgb(255, 255, 255);
+        &:hover{
+            box-shadow: 0px 1px 10px rgb(255, 0, 0); 
+        }
+    }
+    
 }
 
 .oculta{
