@@ -143,7 +143,7 @@ function renderizarCarrito(productosEnCarrito) {
     let comprarCarrito = document.getElementById ("comprarCarrito")
     let vaciarCarrito = document.getElementById ("vaciarCarrito")
 
-    comprarCarrito.addEventListener("click", () => finalizarCompra(carrito, gracias()))
+    comprarCarrito.addEventListener("click", () => finalizarCompra(carrito))
     vaciarCarrito.addEventListener("click", () => vaciarCarrito(carrito))
 }
 
