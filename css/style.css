@@ -219,9 +219,9 @@ div.jugador img {
   background-color: rgb(43, 42, 42);
   height: 55px;
   bottom: 30px;
-  border-radius: 50px;
+  border-radius: 5px 5px 50px 5px;
   right: 30px;
-  width: 80%;
+  width: 50%;
   height: 80%;
   opacity: 100;
   transition: 300ms;

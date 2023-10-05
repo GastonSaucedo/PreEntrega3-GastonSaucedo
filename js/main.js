@@ -108,9 +108,10 @@ function renderizarCarrito(productosEnCarrito) {
     productosEnCarrito.forEach(producto => {
         let tarjetaProductoCarrito = document.createElement("div")
         tarjetaProductoCarrito.innerHTML = `
-        <span> ${producto.nombre} - </span>
-        <span>Unid: ${producto.unidades} - </span>
-        <span>Subtotal: $${producto.subTotal} </span>        
+        <span>- ${producto.nombre}: <br></span>
+        <span>${producto.unidades} unidad - </span>
+        <span>Subtotal: $${producto.subTotal}</span> 
+        
         `
         
         divCarrito.appendChild(tarjetaProductoCarrito)
