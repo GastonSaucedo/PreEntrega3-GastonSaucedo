@@ -14,8 +14,11 @@
 
 
   <link rel="stylesheet" href="./css/bootstrap.css">
-
   <link rel="stylesheet" href="./css/style.css">
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
 
 </head>
 
@@ -71,83 +74,16 @@
   <!--  -->
 
   <h2 class="titulo_tienda">NUESTRA TIENDA</h2>
-  <h4 class="subs_tienda text-center">Canguros</h4>
+  <input class="buscadorProductos" id="buscadorProductos" type="text" placeholder="Nombre del producto">
+  <div class="contenedorTarjetasProductos" id="contenedorProductos"></div>
 
-  <main class="card-group equipos-index ">
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/canguros/blackwhitepuma.jpg" class="card-img-top" alt="canguro puma blanco y negro">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Blanco y Negro</h5>
-        <p class="card-text text-center p-relleno"><small>$2600</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/canguros/bluegreypuma.jpg" class="card-img-top" alt="canguro puma azul y gris">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Azul y Gris</h5>
-        <p class="card-text text-center p-relleno"><small>$2600</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/canguros/pinkpuma.jpg" class="card-img-top" alt="canguro puma rosado">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Rosado</h5>
-        <p class="card-text text-center p-relleno"><small>$2600</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/canguros/blackwhitepuma.jpg" class="card-img-top" alt="canguro puma blanco y negro">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Blanco y Negro</h5>
-        <p class="card-text text-center p-relleno"><small>$2600</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    
-  </main>
-
-
-  <h4 class="subs_tienda text-center">Pantalones</h4>
-
-  <main class="card-group equipos-index ">
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/pantalones/pantalon1.jpg" class="card-img-top" alt="pantalon negro">
-      <div class="card-body">
-        <p class="card-title text-center h-relleno">Negro</p>
-        <p class="card-text text-center p-relleno"><small>$800</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/pantalones/pantalon2.jpg" class="card-img-top" alt="pantalon verde">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Verde</h5>
-        <p class="card-text text-center p-relleno"><small>$800</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/pantalones/pantalon3.jpg" class="card-img-top" alt="pantalon gris">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Gris</h5>
-        <p class="card-text text-center p-relleno"><small>$800</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-    <section class="card bg-dark m-3 ropa" data-aos="fade-up" data-aos-delay="200">
-      <img src="./media/shop/pantalones/pantalon3.jpg" class="card-img-top" alt="pantalon gris">
-      <div class="card-body">
-        <h5 class="card-title text-center h-relleno">Gris</h5>
-        <p class="card-text text-center p-relleno"><small>$800</small>
-          <div class="card-footer text-center "><a href="#" class="btn btn-primary boton">Comprar</a></div>
-      </div>
-    </section>
-  </main>
-
-
+  
+  
+  <button class="mostrarCarrito" id="mostrarCarrito"><i class="fa-solid fa-cart-shopping"></i></button>
+  <div class="oculta" id="contenedorCarrito">
+    <div class="carrito" id="carrito"></div>
+  </div>
+  
 
 
 
@@ -219,7 +155,9 @@
   <!-- FOOTER -->
 
   <script src="./js/main.js"></script>
+  <script src="./js/popperjs.js"></script>
   <script src="./js/bootstrap.js"></script>
+  <script src="https://kit.fontawesome.com/ce4f0f6f13.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

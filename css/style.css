@@ -16,7 +16,7 @@ h1 {
 
 h2, h4, h3, .sumate {
   font-size: 5vw;
-  font-family: broken;
+  font-family: bebasneue;
   color: whitesmoke;
   margin: 1em;
   margin-top: 0.5em;
@@ -70,7 +70,6 @@ ul li {
   src: url(../fonts/helvetica.woff2);
 }
 body {
-  background-color: rgba(0, 0, 0, 0.9);
   font-family: helvetica;
   color: whitesmoke;
   background-color: rgb(26, 26, 26);
@@ -150,22 +149,93 @@ div.jugador img {
   text-align: center;
   margin: 20px;
   color: whitesmoke;
-  font-family: broken;
+  font-family: bebasneue;
   font-size: 80px;
 }
 
-div.ropa {
-  margin: 0 15%;
+.buscadorProductos {
+  display: flex;
+  width: 80%;
+  margin: auto;
 }
-div.ropa h5 {
-  margin-bottom: 1em;
+
+.contenedorTarjetasProductos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: center;
 }
-div.ropa img {
-  object-fit: cover;
+.contenedorTarjetasProductos .contenedorProductos {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 200px;
+  height: auto;
+  margin: 30px 15px;
+  padding: 5px;
+}
+.contenedorTarjetasProductos .contenedorProductos h5 {
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: left;
+}
+.contenedorTarjetasProductos .contenedorProductos button {
+  background-color: #1c1f1d;
+  color: whitesmoke;
+  padding: 3px;
+  border-radius: 10px;
+}
+.contenedorTarjetasProductos .contenedorProductos button:hover {
+  box-shadow: 2px 2px 2px rgb(255, 0, 0);
+}
+.contenedorTarjetasProductos .contenedorProductos img {
   width: 100%;
 }
-div.ropa .boton {
-  font-size: 10px;
+
+.mostrarCarrito {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 55px;
+  height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: #1c1f1d;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 25px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+  z-index: 100;
+}
+.mostrarCarrito:hover {
+  box-shadow: 0px 1px 10px rgb(255, 0, 0);
+}
+
+#contenedorCarrito {
+  display: flex;
+  position: fixed;
+  background-color: rgb(43, 42, 42);
+  height: 55px;
+  bottom: 30px;
+  border-radius: 50px;
+  right: 30px;
+  width: 80%;
+  height: 80%;
+  opacity: 100;
+  transition: 300ms;
+}
+#contenedorCarrito .carrito {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+}
+
+.oculta {
+  display: none !important;
+  transition: 300ms;
 }
 
 /* TIENDA */
