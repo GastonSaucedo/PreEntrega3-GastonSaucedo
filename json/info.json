@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Equipo AMD Ryzen 5 4500 GTX1650 Pro Gamer",
+        "marca": "AMD",
+        "categoria": "armados",
+        "stock": 10,
+        "precio": 650,
+        "rutaImagen": "Equipo_AMD_Ryzen_5_4500_GTX1650_ProGamer.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Equipo Intel Core I3 10100f RX6400 Pro Gamer",
+        "marca": "Intel",
+        "categoria": "armados",
+        "stock": 10,
+        "precio": 600,
+        "rutaImagen": "Equipo_Intel_Core_I3_10100f_RX6400_ProGamer.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Equipo Intel Core I3 10100f RX550 Pro Gamer",
+        "marca": "Intel",
+        "categoria": "armados",
+        "stock": 10,
+        "precio": 490,
+        "rutaImagen": "Equipo_Intel_Core_I3_10100f_RX550_ProGamer.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Equipo AMD Ryzen 3 3200G Radeon Graphics Pro Gamer",
+        "marca": "AMD",
+        "categoria": "armados",
+        "stock": 10,
+        "precio": 350,
+        "rutaImagen": "Equipo_AMD_Ryzen_3_3200G_RadeonGraphics_ProGamer.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Nintendo Switch Lite Blue",
+        "marca": "Nintendo",
+        "categoria": "consola",
+        "stock": 1,
+        "precio": 325,
+        "rutaImagen": "Nintendo_Switch_Lite_Blue.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Nintendo Switch Sports Edition",
+        "marca": "Nintendo",
+        "categoria": "consola",
+        "stock": 2,
+        "precio": 525,
+        "rutaImagen": "Nintendo_Switch_Sports_Edition.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Sony PlayStation 5 Digital Edition",
+        "marca": "Sony",
+        "categoria": "consola",
+        "stock": 1,
+        "precio": 800,
+        "rutaImagen": "Sony_PlayStation_5_Digital_Edition.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Microsoft Xbox Serie X",
+        "marca": "Microsoft",
+        "categoria": "consola",
+        "stock": 3,
+        "precio": 950,
+        "rutaImagen": "Microsoft_Xbox_Serie_X.png"
+    }
+]
