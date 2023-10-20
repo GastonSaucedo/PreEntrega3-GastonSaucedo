@@ -1,12 +1,26 @@
 fetch("./json/info.json")
     .then(respuesta => respuesta.json())
     .then(productos => principal(productos))
+    .catch(error =>
+        Swal.fire({
+            icon: 'error',
+            title: 'Lo sentimos',
+            text: 'Algo salio mal al intentar cargar la página',
+            color: '#ffffff',
+            background: '#2b2a2a',
+
+        }
+        ).then((result) => {
+            if (result.isConfirmed) {
+                location.reload()
+            }
+        }))
 
 
 
 
 function principal(productos) {
-    
+
     let carrito = []
     let carritoRecuperado = localStorage.getItem("carrito")
     if (carritoRecuperado) {
