@@ -28,6 +28,8 @@ body {
     background-color: rgb(26, 26, 26);
     height: 100vh;
     max-width: 100%;
+    overflow-y: auto;
+
 }
 
 /* NAVBAR */
@@ -50,6 +52,7 @@ nav {
         border-radius: 10px;
         margin: 0 1vw;
         transition: 500ms ease-in-out;
+
         :hover {
             /* background-color: #ff0000; */
             background-image: linear-gradient(to top, red, $color-nav);
@@ -94,11 +97,11 @@ div.cabecera {
 
 }
 
-div.sobre-nosotros{
+div.sobre-nosotros {
     margin: 3em;
 }
 
-div.equipos-index{
+div.equipos-index {
     margin: 3em;
 }
 
@@ -106,66 +109,76 @@ div.equipos-index{
 /* INDEX */
 
 /* EQUIPOS */
-div.jugador{
+div.jugador {
     margin: 0 6em;
-    img{
+
+    img {
         width: 20vw;
     }
 }
+
 /* EQUIPOS */
 
 
 /* TIENDA */
 
-.titulo_tienda{
+.titulo_tienda {
     text-align: center;
     margin: 20px;
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: bebasneue;
     font-size: 80px;
 }
 
-.buscadorProductos{
+.buscadorProductos {
     display: flex;
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
-.contenedorTarjetasProductos{
+.contenedorTarjetasProductos {
     display: flex;
     flex-wrap: wrap;
     margin: 30px;
     justify-content: center;
-    .contenedorProductos{
-        border: 2px solid red;
+    .contenedorProductos {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #282c29;
         border-radius: 10px;
         width: 200px;
         height: auto;
         margin: 30px 15px;
-        padding: 5px; 
-        h5{
+        padding: 5px;
+
+        h5 {
             margin-top: 5px;
             font-size: 20px;
             text-align: left;
-        } 
-        button{
-           background-color: #1c1f1d;
-           color: whitesmoke;
-           padding: 3px;
-           border-radius: 10px;
-           margin: 20px;
-           &:hover{
-            box-shadow: 2px 2px 2px rgb(255, 0, 0);
-           }
-           
         }
-        img{
+
+        button {
+            border: 2px solid #282c29;
+            background-color: #1c1f1d;
+            color: whitesmoke;
+            padding: 3px;
+            border-radius: 10px;
+            margin: auto;
+
+            &:hover {
+                box-shadow: 2px 2px 2px #ff0000;
+            }
+
+        }
+
+        img {
             width: 100%;
         }
     }
 }
 
-.mostrarCarrito{
+.mostrarCarrito {
+    border: 2px solid red;
     display: flex;
     position: fixed;
     justify-content: center;
@@ -182,29 +195,39 @@ div.jugador{
     font-size: 25px;
     box-shadow: 0px 1px 10px rgb(0, 0, 0);
     z-index: 100;
-    &:hover{
-        box-shadow: 0px 1px 10px rgb(255, 0, 0);
-       }
+
+    &:hover {
+        box-shadow: 0px 1px 10px #ff0000;
+    }
 }
 
-#contenedorCarrito{
+.contenedorCarrito {
     display: flex;
     position: fixed;
-    background-color: rgb(43, 42, 42);
+    background-color: #2b2a2a;
     height: 55px;
-    bottom: 30px;
+    bottom: 55px;
     border-radius: 5px 5px 50px 5px;
     right: 30px;
     width: 50%;
-    height: 80%;
-    transition: 300ms;
-    .carrito{
-        display: block;
-        width: 100%;
-        height: 100%;
+    height: 70%;
+    overflow-y: auto;
+    
+
+    .carrito {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 80%;
         margin: 20px;
+        
+        p {
+            margin: 0;
+        }
     }
-    .comprarCarrito{
+
+    .comprarCarrito {
+        border: 2px solid red;
         display: flex;
         position: fixed;
         justify-content: center;
@@ -216,13 +239,16 @@ div.jugador{
         right: 100px;
         font-size: 15px;
         border-radius: 12px;
-        background-color: rgb(43, 42, 42);
-        color: rgb(255, 255, 255);
-        &:hover{
-            box-shadow: 0px 1px 10px rgb(255, 0, 0); 
+        background-color: #2b2a2a;
+        color: #ffffff;
+
+        &:hover {
+            box-shadow: 0px 1px 10px rgb(255, 0, 0);
         }
     }
-    .vaciarCarrito{
+
+    .vaciarCarrito {
+        border: 2px solid red;
         display: flex;
         position: fixed;
         justify-content: center;
@@ -236,16 +262,24 @@ div.jugador{
         border-radius: 12px;
         background-color: rgb(43, 42, 42);
         color: rgb(255, 255, 255);
-        &:hover{
-            box-shadow: 0px 1px 10px rgb(255, 0, 0); 
+
+        &:hover {
+            box-shadow: 0px 1px 10px rgb(255, 0, 0);
         }
     }
-    
+
 }
 
-.oculta{
+.tostada {
+    background: #2b2a2a;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+
+
+
+.oculta {
     display: none !important;
-    transition: 300ms;
 }
 
 /* TIENDA */
@@ -253,9 +287,10 @@ div.jugador{
 
 /* CONTACTO */
 
-.formulario{
+.formulario {
     margin-bottom: 20px;
-    iframe{
+
+    iframe {
         width: 100%;
         height: 100%;
     }
@@ -302,41 +337,46 @@ main.pie-pagina {
 
 
 @media screen and (max-width: 640px) {
-    nav{
+    nav {
         img {
-        width: 40px;
-        margin: 0px 0px;
-        ul li{
-            font-size: 20px;
-        }
-        .equipos-nav {
+            width: 40px;
+            margin: 0px 0px;
+
             ul li {
-                font-size: 4vw;
+                font-size: 20px;
+            }
+
+            .equipos-nav {
+                ul li {
+                    font-size: 4vw;
+                }
             }
         }
+
     }
 
-}
-    h2{
+    h2 {
         font-size: 8vw;
     }
-    h3{
+
+    h3 {
         font-size: 6vw;
     }
 
-    h4{
+    h4 {
         font-size: 4vw;
     }
 
-    div.jugador{
+    div.jugador {
         margin: 0.3em;
-        img{
+
+        img {
             width: 100%;
         }
     }
 
-    div.politica-privacidad{
-        p{
+    div.politica-privacidad {
+        p {
             height: 50vw;
             font-size: 3vw;
             box-sizing: border-box;
@@ -346,15 +386,18 @@ main.pie-pagina {
 
 
 
-    div.ropa{
+    div.ropa {
         margin: 0 15%;
-        h5{
+
+        h5 {
             margin-bottom: 10px;
         }
-        img{
+
+        img {
             width: 100%;
         }
-        .boton{
+
+        .boton {
             font-size: 8px;
         }
     }
@@ -362,15 +405,16 @@ main.pie-pagina {
 }
 
 @media screen and (min-width:640px) and (max-width: 1080px) {
-    nav{
+    nav {
         img {
-        width: 10vw;
-        margin: 0.5vw 2vw;
+            width: 10vw;
+            margin: 0.5vw 2vw;
+        }
+
+        ul li {
+            font-size: 5px;
+        }
     }
-    ul li{
-        font-size: 5px;
-    }
-}
 }
 
 

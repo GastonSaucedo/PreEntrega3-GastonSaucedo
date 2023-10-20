@@ -80,7 +80,6 @@ function agregarProductoAlCarrito(productos, carrito, e) {
     let productoEnCarrito
     let productoBuscado
 
-
     productoBuscado = productos.find(producto => producto.id == Number(e.target.id))
     productoEnCarrito = carrito.find(producto => producto.id == productoBuscado.id)
 
@@ -99,8 +98,21 @@ function agregarProductoAlCarrito(productos, carrito, e) {
         }
         productoBuscado.stock--
         localStorage.setItem("carrito", JSON.stringify(carrito))
+
+        Toastify({
+            text: "Producto agregado al carrito",
+            duration: 1500,
+            className: "tostada",
+        }).showToast();
+
     } else {
-        alert("Lo sentimos, el producto seleccionado no está disponible.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Lo sentimos',
+            text: 'no contamos con mas Stock del producto seleccionado',
+            color: '#ffffff',
+            background: '#2b2a2a',
+        })
     }
     renderizarCarrito(carrito)
 }
@@ -118,12 +130,22 @@ let botonVerOcultar = document.getElementById("mostrarCarrito")
 botonVerOcultar.addEventListener("click", mostrarOcultarCarrito)
 
 function mostrarOcultarCarrito() {
-    let contenedorCarrito = document.getElementById("contenedorCarrito")
-    let botonMostrarCarrito = document.getElementById("botonMostrarCarrito")
+    if (carrito.length > 0) {
+        let contenedorCarrito = document.getElementById("contenedorCarrito")
+        let botonMostrarCarrito = document.getElementById("botonMostrarCarrito")
 
-    botonMostrarCarrito.classList.toggle("fa-x")
-    botonMostrarCarrito.classList.toggle("fa-cart-shopping")
-    contenedorCarrito.classList.toggle("oculta")
+        botonMostrarCarrito.classList.toggle("fa-x")
+        botonMostrarCarrito.classList.toggle("fa-cart-shopping")
+        contenedorCarrito.classList.toggle("oculta")
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Carrito vacio',
+            text: 'Agregue algun producto para continuar',
+            color: '#ffffff',
+            background: '#2b2a2a',
+        })
+    }
 }
 
 function renderizarCarrito(productosEnCarrito) {
@@ -133,18 +155,21 @@ function renderizarCarrito(productosEnCarrito) {
     productosEnCarrito.forEach(producto => {
         let tarjetaProductoCarrito = document.createElement("div")
         tarjetaProductoCarrito.innerHTML = `
-        <span>- ${producto.nombre}: </span>
+        <p>- ${producto.nombre}: </p>
         <span>${producto.unidades} unidad - </span>
-        <span>Subtotal: $${producto.subTotal}</span> 
+        <span>Subtotal: $${producto.subTotal}</span> <br>
+        <br>
         `
         divCarrito.appendChild(tarjetaProductoCarrito)
     })
 
-    let comprarCarrito = document.getElementById ("comprarCarrito")
-    let vaciarCarrito = document.getElementById ("vaciarCarrito")
+
+
+    let comprarCarrito = document.getElementById("comprarCarrito")
+    let vaciarCarrito = document.getElementById("vaciarCarrito")
 
     comprarCarrito.addEventListener("click", () => finalizarCompra(carrito))
-    vaciarCarrito.addEventListener("click", () => vaciarCarrito(carrito))
+    vaciarCarrito.addEventListener("click", () => vaciarElCarrito(carrito))
 }
 
 /* MOSTRAR CARRITO */
@@ -152,21 +177,58 @@ function renderizarCarrito(productosEnCarrito) {
 /* FINALIZAR COMPRA */
 
 function finalizarCompra(carrito) {
-    carrito = []
-    localStorage.removeItem("carrito")
-    renderizarCarrito([])
-    location.reload();
+    if (carrito.length > 0) {
+        carrito = []
+        localStorage.removeItem("carrito")
+        renderizarCarrito([])
+        Swal.fire({
+            icon: 'success',
+            title: 'Compra realizada',
+            text: 'Muchas gracias por preferirnos',
+            color: '#ffffff',
+            background: '#2b2a2a',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload()
+            }
+        })
+    }
 }
 
 /* FINALIZAR COMPRA */
 
 /* VACIAR CARRITO */
 
-function vaciarCarrito(carrito){
-    carrito = []
-    localStorage.removeItem("carrito")
-    renderizarCarrito([])
-    location.reload();
+function vaciarElCarrito(carrito) {
+    if (carrito.length > 0) {
+        Swal.fire({
+            title: '¿Vaciar el Carrito?',
+            text: "NO PODRAS REVERTIR ESTA ACCIÓN",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'cancelar',
+            confirmButtonText: 'Si, vaciar el carrito',
+            color: '#ffffff',
+            background: '#2b2a2a',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                carrito = []
+                localStorage.removeItem("carrito")
+                renderizarCarrito([])
+                Swal.fire(
+                    'El carrito fue vaciado',
+                    '',
+                    'success',
+                ).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload()
+                    }
+                })
+            }
+        })
+    }
 }
 
 /* VACIAR CARRITO */
